@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>在线代码运行</title>
-    <link href="/static/js/codemirror-5.41.0/lib/codemirror.css" rel="stylesheet">
-    <script src="/static/js/codemirror-5.41.0/lib/codemirror.js"></script>
-    <script src="/static/js/codemirror-5.41.0/mode/go/go.js"></script>
-    <script src="/static/js/codemirror-5.41.0/mode/python/python.js"></script>
-    <script src="/static/js/codemirror-5.41.0/mode/php/php.js"></script>
-    <script src="/static/js/codemirror-5.41.0/mode/clike/clike.js"></script>
-    <link href="/static/js/codemirror-5.41.0/theme/darcula.css" rel="stylesheet">
+    <link href="/tools/static/js/codemirror-5.41.0/lib/codemirror.css" rel="stylesheet">
+    <script src="/tools/static/js/codemirror-5.41.0/lib/codemirror.js"></script>
+    <script src="/tools/static/js/codemirror-5.41.0/mode/go/go.js"></script>
+    <script src="/tools/static/js/codemirror-5.41.0/mode/python/python.js"></script>
+    <script src="/tools/static/js/codemirror-5.41.0/mode/php/php.js"></script>
+    <script src="/tools/static/js/codemirror-5.41.0/mode/clike/clike.js"></script>
+    <link href="/tools/static/js/codemirror-5.41.0/theme/darcula.css" rel="stylesheet">
     <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script>
         var _hmt = _hmt || [];
