@@ -7,7 +7,7 @@ import (
 
 func init() {
 	beego.Router("/tools/runcode", &controllers.CodeRunController{})
-	beego.Router("/tools/sharecode", &controllers.CodeShareController{})
+	beego.Router("/tools/s", &controllers.CodeShareController{})
 	beego.Router("/tools/v2/runcode", &controllers.CodeRunControllerV2{})
 
 	beego.SetStaticPath("/tools/static", "static")

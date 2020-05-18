@@ -179,7 +179,7 @@
         $("#code_share").click(function () {
             $("#share_url").attr("value", "");
             $.post(
-                "/tools/sharecode",
+                "/tools/s",
                 {"code_type": defaultLag, "code_content": editor.getValue()},
                 function (data, status) {
                     if (status != "success") {
@@ -192,7 +192,7 @@
                         $("#share_url").attr("value", text);
                         return
                     }
-                    var shareUrl = window.location.protocol + "//" + window.location.host + "/tools/sharecode?id=" + data.data
+                    var shareUrl = window.location.protocol + "//" + window.location.host + "/tools/s?id=" + data.data
                     $("#share_url").attr("value", shareUrl);
                 }
             );
