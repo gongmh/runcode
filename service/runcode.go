@@ -134,7 +134,7 @@ func runCodeInDocker(codeType, md5, codeContent string) (result string, err erro
 	s, err := session.Command("/bin/sh", "-c", cmd).Output()
 	if err != nil {
 		logs.Warning("runCodeInDocker: Command error. cmd=%s, err=%v", cmd, err)
-		return "", err
+		//return "", err
 	}
 	return string(s), nil
 }
