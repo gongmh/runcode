@@ -29,6 +29,7 @@ var map = new BMap.Map("allmap");    // 创建Map实例
 map.centerAndZoom(new BMap.Point(centerLat,centerLng), zoomLevel);
 
 map.setMapStyleV2({styleId: '7f931e749f38960cf27eb5fdbd88de6a'});
+// map.setMapStyleV2({styleId: '8526f7a861939934384b083607c56fb0'});
 
 //添加地图类型控件
 map.addControl(new BMap.MapTypeControl({
@@ -39,11 +40,18 @@ map.addControl(new BMap.MapTypeControl({
 
 map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
+//BMap_Symbol_SHAPE_POINT
+var myIcon = new BMap.Symbol(BMap_Symbol_SHAPE_CIRCLE, {
+    scale: 3,//图标缩放大小
+    fillColor: "red",//填充颜色
+    fillOpacity: 0.5//填充透明度
+});
+
 for(var i=0; i<showInfo.markList.length; i++) {
     var lat = showInfo.markList[i].lat;
     var lng = showInfo.markList[i].lng;
     var t = showInfo.markList[i].title;
-    var marker = new BMap.Marker(new BMap.Point(lng,lat));        // 创建标注
+    var marker = new BMap.Marker(new BMap.Point(lng,lat), {icon:myIcon});        // 创建标注
 
     // var label = new BMap.Label(t,{"offset":new BMap.Size(10,-20)});
     // marker.setLabel(label);
@@ -61,7 +69,7 @@ for(var i=0; i<showInfo.lineList.length; i++) {
         nodes.push(new BMap.Point(lineInfo.points[j].lng, lineInfo.points[j].lat));
     }
     var polyline = new BMap.Polyline(nodes,
-        {strokeColor: "blue", strokeWeight: 6, strokeOpacity: 0.5}
+        {strokeColor: "blue", strokeWeight: 3, strokeOpacity: 0.5}
     );
     map.addOverlay(polyline);
 }
