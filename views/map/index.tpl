@@ -6,7 +6,7 @@
     <style type="text/css">
         body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
     </style>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=uKiGoT2VOxDUZusPVbW24TSa81UDAftF"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=uKiGoT2VOxDUZusPVbW24TSa81UDAftF"></script>
     <title>足迹👣</title>
 </head>
 <body>
