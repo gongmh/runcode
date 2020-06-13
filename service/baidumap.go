@@ -169,5 +169,43 @@ func getLineList() []Line {
 				{Title: "中山桥", Point: Point{103.823431, 36.070959}, Desc: ""},
 			},
 		},
+
+		{
+			Title: "北疆环线",
+			Points: []MarkPoint{
+				{Title: "乌鲁木齐", Point: Point{87.590787, 43.825756}, Desc: ""},
+				{Title: "吐鲁番", Point: Point{89.52114, 42.925261}, Desc: ""},
+				{Title: "喀纳斯禾木", Point: Point{87.439506, 48.574346}, Desc: ""},
+				{Title: "克拉玛依", Point: Point{84.871732, 45.591439}, Desc: ""},
+				{Title: "乌鲁木齐", Point: Point{87.590787, 43.825756}, Desc: ""},
+			},
+		},
+
+		{
+			Title: "大同环线",
+			Points: []MarkPoint{
+				{Title: "云冈石窟", Point: Point{113.144291, 40.119273}, Desc: ""},
+				{Title: "悬空寺", Point: Point{113.721979, 39.666616}, Desc: ""},
+				{Title: "应县木塔", Point: Point{113.195635, 39.572146}, Desc: ""},
+				{Title: "岱海", Point: Point{112.65141, 40.601473}, Desc: ""},
+				{Title: "云冈石窟", Point: Point{113.144291, 40.119273}, Desc: ""},
+			},
+		},
+
+		{
+			Title: "回乡",
+			Points: []MarkPoint{
+				{Title: "北京", Point: Point{116.396797, 40.025231}, Desc: ""},
+				{Title: "保定", Point: Point{115.487699, 38.868475}, Desc: ""},
+				{Title: "石家庄", Point: Point{114.490825, 38.016821}, Desc: ""},
+				{Title: "邯郸", Point: Point{114.481854, 36.607487}, Desc: ""},
+				{Title: "安阳", Point: Point{114.34631, 36.110865}, Desc: ""},
+				{Title: "新乡", Point: Point{113.865742, 35.31287}, Desc: ""},
+				{Title: "郑州", Point: Point{113.668966, 34.787903}, Desc: ""},
+				{Title: "许昌", Point: Point{113.893707, 34.054566}, Desc: ""},
+				{Title: "漯河", Point: Point{113.970479, 33.578308}, Desc: ""},
+				{Title: "西平", Point: Point{113.878654, 33.397041}, Desc: ""},
+			},
+		},
 	}
 }
