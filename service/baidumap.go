@@ -93,6 +93,7 @@ func getMarkList() []MarkPoint {
 		{Title: "岷县", Point: Point{104.047075, 34.441573}, Desc: ""},
 		{Title: "定西分水岭", Point: Point{104.096823, 34.938273}, Desc: ""},
 		{Title: "西安", Point: Point{108.909777, 34.158992}, Desc: ""},
+		{Title: "西北第一漂-丹江漂流", Point: Point{110.591399, 33.454982}, Desc: ""},
 		{Title: "乾陵", Point: Point{108.224607, 34.583649}, Desc: ""},
 		{Title: "华山", Point: Point{110.073028, 34.497647}, Desc: ""},
 		{Title: "太原", Point: Point{112.617131, 37.797443}, Desc: ""},
