@@ -28,8 +28,9 @@ if(showInfo.markList.length>0){
 var map = new BMap.Map("allmap");    // 创建Map实例
 map.centerAndZoom(new BMap.Point(centerLat,centerLng), zoomLevel);
 
-map.setMapStyleV2({styleId: '7f931e749f38960cf27eb5fdbd88de6a'});
+// map.setMapStyleV2({styleId: '7f931e749f38960cf27eb5fdbd88de6a'});
 // map.setMapStyleV2({styleId: '8526f7a861939934384b083607c56fb0'});
+map.setMapStyleV2({styleId: 'eff123a007bb8651ae658ee55010aec1'});
 
 //添加地图类型控件
 map.addControl(new BMap.MapTypeControl({
@@ -42,9 +43,12 @@ map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
 //BMap_Symbol_SHAPE_POINT
 var myIcon = new BMap.Symbol(BMap_Symbol_SHAPE_CIRCLE, {
-    scale: 3,//图标缩放大小
+    scale: 2,//图标缩放大小
     fillColor: "red",//填充颜色
-    fillOpacity: 0.5//填充透明度
+    fillOpacity: 0.5,//填充透明度
+    strokeOpacity: 1,
+    strokeWeight: 0,
+    strokeColor: "red",
 });
 
 for(var i=0; i<showInfo.markList.length; i++) {

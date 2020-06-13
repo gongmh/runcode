@@ -207,5 +207,18 @@ func getLineList() []Line {
 				{Title: "西平", Point: Point{113.878654, 33.397041}, Desc: ""},
 			},
 		},
+
+		{
+			Title: "锡盟",
+			Points: []MarkPoint{
+				{Title: "北京", Point: Point{116.396797, 40.025231}, Desc: ""},
+				{Title: "张家口", Point: Point{114.886893, 40.710106}, Desc: ""},
+				{Title: "坝上草原", Point: Point{115.411307, 41.245692}, Desc: ""},
+				{Title: "宝昌", Point: Point{115.283741, 41.900326}, Desc: ""},
+				{Title: "闪电湖", Point: Point{115.841109, 41.654533}, Desc: ""},
+				{Title: "桑根达来", Point: Point{115.9624, 42.694208}, Desc: ""},
+				{Title: "锡林浩特市平顶山", Point: Point{116.086725, 43.627594}, Desc: ""},
+			},
+		},
 	}
 }
