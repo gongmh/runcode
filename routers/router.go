@@ -13,6 +13,7 @@ func init() {
 
 	//地图
 	beego.Router("/tools/mapshow", &controllers.MapShow{})
+	beego.Router("/tools/dajuesi", &controllers.Dajuesi{})
 
 	beego.SetStaticPath("/tools/static", "static")
 }

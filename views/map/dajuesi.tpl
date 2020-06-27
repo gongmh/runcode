@@ -7,7 +7,7 @@
         body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
     </style>
     <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=uKiGoT2VOxDUZusPVbW24TSa81UDAftF"></script>
-    <title>足迹👣</title>
+    <title>👣大觉寺</title>
 </head>
 <body>
 <div id="allmap"></div>
@@ -21,9 +21,16 @@ var zoomLevel = 5
 
 var showInfo = {{.show_info}}
 
-if(showInfo.markList.length>0){
-
+if(showInfo.zoomLevel>0){
+    zoomLevel = showInfo.zoomLevel
 }
+if(showInfo.centerPoint.lat>0){
+    centerLat = showInfo.centerPoint.lat
+}
+if(showInfo.centerPoint.lng>0){
+    centerLng = showInfo.centerPoint.lng
+}
+
 // 百度地图API功能
 var map = new BMap.Map("allmap");    // 创建Map实例
 map.centerAndZoom(new BMap.Point(centerLng,centerLat), zoomLevel);
