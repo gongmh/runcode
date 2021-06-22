@@ -1,7 +1,5 @@
 package service
 
-import "time"
-
 type Point struct {
 	Lng float64 `json:"lng"`
 	Lat float64 `json:"lat"`
@@ -9,9 +7,9 @@ type Point struct {
 
 type MarkPoint struct {
 	Point
-	Title      string    `json:"title"`
-	Desc       string    `json:"-"`
-	CreateTime time.Time `json:"-"`
+	Title      string `json:"title"`
+	Desc       string `json:"-"`
+	CreateTime string `json:"-"`
 }
 
 type Line struct {
@@ -70,6 +68,26 @@ func GenMapShowInfo() (si ShowInfo) {
 
 func getMarkList() []MarkPoint {
 	return []MarkPoint{
+		{Title: "信阳东站", Point: Point{114.165959, 32.149747}, Desc: "", CreateTime: "2021-05-08 22:24:30"},
+		{Title: "武汉天河机场", Point: Point{114.217379, 30.776258}, Desc: "", CreateTime: "2021-05-08 18:24:30"},
+		{Title: "伊宁汉庭上海城酒店", Point: Point{81.300803, 43.947003}, Desc: "", CreateTime: "2021-05-07 22:00:00"},
+		{Title: "伊宁六星街", Point: Point{81.316078, 43.938453}, Desc: "", CreateTime: "2021-05-07 19:24:30"},
+		{Title: "霍尔果斯国门", Point: Point{80.411855, 44.219006}, Desc: "", CreateTime: "2021-05-07 10:24:30"},
+		{Title: "霍尔果斯全季酒店", Point: Point{80.419168, 44.215933}, Desc: "", CreateTime: "2021-05-06 22:24:30"},
+		{Title: "果子沟大桥景区", Point: Point{81.151629, 44.474556}, Desc: "", CreateTime: "2021-05-06 15:24:30"},
+		{Title: "赛里木湖景区", Point: Point{81.401139, 44.612755}, Desc: "", CreateTime: "2021-05-06 12:24:30"},
+		{Title: "新源县格林豪泰商务酒店（那拉提店）", Point: Point{83.264764, 43.44503}, Desc: "", CreateTime: "2021-05-05 22:24:30"},
+		{Title: "那拉提景区", Point: Point{84.032821, 43.325552}, Desc: "", CreateTime: "2021-05-05 12:24:30"},
+		{Title: "新源县腾龙云海酒店", Point: Point{83.271604, 43.430503}, Desc: "", CreateTime: "2021-05-04 22:24:30"},
+		{Title: "新疆喀拉峻游客服务中心景区（主入口）", Point: Point{81.906539, 43.124788}, Desc: "", CreateTime: "2021-05-04 09:24:30"},
+		{Title: "特克斯酒店", Point: Point{81.84237, 43.223632}, Desc: "", CreateTime: "2021-05-03 22:24:30"},
+		{Title: "特克斯八卦城", Point: Point{81.846232, 43.221328}, Desc: "", CreateTime: "2021-05-03 19:24:30"},
+		{Title: "喀拉峻景区布拉克门票站", Point: Point{82.04804, 43.099923}, Desc: "", CreateTime: "2021-05-03 12:24:30"},
+		{Title: "伊宁全季酒店（上海城）", Point: Point{81.307841, 43.950092}, Desc: "", CreateTime: "2021-05-02 21:24:30"},
+		{Title: "伊宁喀赞其", Point: Point{81.339165, 43.918632}, Desc: "", CreateTime: "2021-05-02 12:24:30"},
+		{Title: "伊宁机场", Point: Point{81.338952, 43.963204}, Desc: "", CreateTime: "2021-05-02 08:10:30"},
+		{Title: "乌鲁木齐速8智选酒店（乌鲁木齐机场店）", Point: Point{87.49028, 43.906596}, Desc: "", CreateTime: "2021-05-02 01:10:30"},
+		{Title: "乌鲁木齐机场", Point: Point{87.487028, 43.912386}, Desc: "", CreateTime: "2021-05-01 23:10:30"},
 		{Title: "乌鲁木齐", Point: Point{87.590787, 43.825756}, Desc: ""},
 		{Title: "克拉玛依", Point: Point{84.871732, 45.591439}, Desc: ""},
 		{Title: "吐鲁番", Point: Point{89.52114, 42.925261}, Desc: ""},
@@ -139,6 +157,23 @@ func getMarkList() []MarkPoint {
 
 func getLineList() []Line {
 	return []Line{
+		{
+			Title: "伊宁环线",
+			Points: []MarkPoint{
+				{Title: "伊宁汉庭上海城酒店", Point: Point{81.300803, 43.947003}, Desc: "", CreateTime: "2021-05-07 22:00:00"},
+				{Title: "霍尔果斯国门", Point: Point{80.411855, 44.219006}, Desc: "", CreateTime: "2021-05-07 10:24:30"},
+				{Title: "果子沟大桥景区", Point: Point{81.151629, 44.474556}, Desc: "", CreateTime: "2021-05-06 15:24:30"},
+				{Title: "赛里木湖景区", Point: Point{81.401139, 44.612755}, Desc: "", CreateTime: "2021-05-06 12:24:30"},
+				{Title: "新源县格林豪泰商务酒店（那拉提店）", Point: Point{83.264764, 43.44503}, Desc: "", CreateTime: "2021-05-05 22:24:30"},
+				{Title: "那拉提景区", Point: Point{84.032821, 43.325552}, Desc: "", CreateTime: "2021-05-05 12:24:30"},
+				{Title: "新源县腾龙云海酒店", Point: Point{83.271604, 43.430503}, Desc: "", CreateTime: "2021-05-04 22:24:30"},
+				{Title: "新疆喀拉峻游客服务中心景区（主入口）", Point: Point{81.906539, 43.124788}, Desc: "", CreateTime: "2021-05-04 09:24:30"},
+				{Title: "特克斯八卦城", Point: Point{81.846232, 43.221328}, Desc: "", CreateTime: "2021-05-03 19:24:30"},
+				{Title: "喀拉峻景区布拉克门票站", Point: Point{82.04804, 43.099923}, Desc: "", CreateTime: "2021-05-03 12:24:30"},
+				{Title: "伊宁喀赞其", Point: Point{81.339165, 43.918632}, Desc: "", CreateTime: "2021-05-02 12:24:30"},
+				{Title: "伊宁机场", Point: Point{81.338952, 43.963204}, Desc: "", CreateTime: "2021-05-02 08:10:30"},
+			},
+		},
 		{
 			Title: "青海大环线",
 			Points: []MarkPoint{
