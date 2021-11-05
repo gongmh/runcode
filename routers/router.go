@@ -14,6 +14,7 @@ func init() {
 	//地图
 	beego.Router("/tools/mapshow", &controllers.MapShow{})
 	beego.Router("/tools/dajuesi", &controllers.Dajuesi{})
+	beego.Router("/tools/xiangbala", &controllers.XiangBaLa{})
 	beego.Router("/tools/zixishi", &controllers.ZXS{})
 
 	beego.SetStaticPath("/tools/static", "static")
