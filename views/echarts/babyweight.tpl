@@ -57,7 +57,7 @@
             name: '标准最高值',
             type: 'line',
             data: showInfo.MaxWeight,
-            areaStyle: {color:'#2F4F4F',opacity:1,origin:"start"},
+            areaStyle: {color:'#C0D9D9',opacity:1,origin:"start"},
           },
           {
             name: '标准最低值',
