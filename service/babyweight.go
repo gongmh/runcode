@@ -15,7 +15,7 @@ func GetChildWeightInfo() WeightInfo {
 		weightInfo.CurrentWeight = append(weightInfo.CurrentWeight, info.CurrentWeight)
 		weightInfo.MaxWeight = append(weightInfo.MaxWeight, info.StandMaxWeight*2)
 		weightInfo.MinWeight = append(weightInfo.MinWeight, info.StandMinWeight*2)
-		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, idx))
+		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, idx+1))
 	}
 	return weightInfo
 }
