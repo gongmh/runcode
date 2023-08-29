@@ -6,7 +6,7 @@
 </head>
 <body>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="float: middle;width:100%;height:550px;position:relative"></div>
     <script type="text/javascript">
 
       var showInfo = {{.show_info}}
