@@ -1,6 +1,9 @@
 package service
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 type WeightInfo struct {
 	Date          []string
@@ -11,11 +14,13 @@ type WeightInfo struct {
 
 func GetChildWeightInfo() WeightInfo {
 	var weightInfo WeightInfo
-	for idx, info := range weightList {
+	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
+	for _, info := range weightList {
 		weightInfo.CurrentWeight = append(weightInfo.CurrentWeight, info.CurrentWeight)
 		weightInfo.MaxWeight = append(weightInfo.MaxWeight, info.StandMaxWeight*2)
 		weightInfo.MinWeight = append(weightInfo.MinWeight, info.StandMinWeight*2)
-		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, idx+1))
+		tmpData, _ := time.Parse("2006-01-02", info.Date)
+		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, int64(tmpData.Sub(birthDate).Hours())/24+1))
 	}
 	return weightInfo
 }
@@ -47,6 +52,11 @@ var weightList = []weightConf{
 	{StandMaxWeight: 5.4, StandMinWeight: 3.2, CurrentWeight: 6.90, Date: "2023-09-07"},
 	{StandMaxWeight: 5.4, StandMinWeight: 3.2, CurrentWeight: 7.00, Date: "2023-09-08"},
 	{StandMaxWeight: 5.4, StandMinWeight: 3.2, CurrentWeight: 7.10, Date: "2023-09-09"},
+	{StandMaxWeight: 5.4, StandMinWeight: 3.2, CurrentWeight: 7.10, Date: "2023-09-10"},
+	{StandMaxWeight: 5.4, StandMinWeight: 3.2, CurrentWeight: 7.70, Date: "2023-09-11"},
+	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.30, Date: "2023-09-12"},
+	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.40, Date: "2023-09-13"},
+	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.70, Date: "2023-09-14"},
 }
 
 type weightConf struct {
