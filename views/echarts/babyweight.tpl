@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <script src="/tools/static/js/echarts.min.js"></script>
+<p title="体重">体重</p>
 </head>
 <body>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
