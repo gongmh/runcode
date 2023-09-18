@@ -25,6 +25,15 @@ func GetChildWeightInfo() WeightInfo {
 	return weightInfo
 }
 
+var eventMap = []EventInfo{
+	{Date: "2023-08-15", EventDesc: "出生"},
+	{Date: "2023-08-16", EventDesc: "接种疫苗：卡介苗、乙肝第一针"},
+	{Date: "2023-08-18", EventDesc: "胎便排完"},
+	{Date: "2023-08-19", EventDesc: "出院"},
+	{Date: "2023-09-11", EventDesc: "办理出生证明"},
+	{Date: "2023-09-18", EventDesc: "第一罐奶粉吃完"},
+}
+
 var weightList = []weightConf{
 	{StandMaxWeight: 4.2, StandMinWeight: 2.6, CurrentWeight: 5.82, Date: "2023-08-15"},
 	{StandMaxWeight: 4.2, StandMinWeight: 2.6, CurrentWeight: 5.70, Date: "2023-08-16"},
@@ -60,6 +69,15 @@ var weightList = []weightConf{
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.60, Date: "2023-09-15"},
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.90, Date: "2023-09-16"},
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 8.00, Date: "2023-09-17"},
+}
+
+type EventInfo struct {
+	Date      string
+	EventDesc string
+}
+
+func GetChildEventInfo() []EventInfo {
+	return eventMap
 }
 
 type weightConf struct {

@@ -18,7 +18,7 @@ func init() {
 	beego.Router("/tools/zixishi", &controllers.ZXS{})
 
 	//图表
-	beego.Router("/tools/babyweight", &controllers.BabyWeight{})
+	beego.Router("/tools/babyweight", &controllers.BabyInfo{})
 
 	beego.SetStaticPath("/tools/static", "static")
 }
