@@ -3,10 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <script src="/tools/static/js/echarts.min.js"></script>
+<title>正正信息</title>
 </head>
 <body>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
-    <div id="weight" style="float: middle;width:100%;height:550px;position:relative"></div>
+    <div id="chart" style="float: middle;width:100%;height:550px;position:relative">
+      <div id="weight" style="float: left;width:60%;height:550px;position:relative"></div>
+      <div id="length" style="float: right;width:40%;height:550px;position:relative"></div>
+    </div>
     <div id="event" style="float: middle;width:100%;height:200px;position:relative"></div>
     <script type="text/javascript">
         var eventInfo = {{.event_info}};
@@ -130,5 +134,69 @@
 
       option && myChart.setOption(option);
     </script>
+
+    <script type="text/javascript">
+          var lengthInfo = {{.length_info}}
+          var chartDom = document.getElementById('length');
+          var myChart = echarts.init(chartDom);
+          var option;
+
+          option = {
+            title: {
+              text: '儿童身高'
+            },
+            tooltip: {
+              trigger: 'axis'
+            },
+            legend: {
+              data: ['当前身高', '标准最高值', '标准最低值']
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            toolbox: {
+              feature: {
+                saveAsImage: {}
+              }
+            },
+            xAxis: {
+              type: 'category',
+              name: '日期',
+              boundaryGap: false,
+              data: lengthInfo.Date
+            },
+            yAxis: {
+              type: 'value',
+              name: '厘米'
+            },
+            series: [
+              {
+                name: '当前身高',
+                type: 'line',
+                //stack: 'Total',
+                data: lengthInfo.CurrentLength,
+                lineStyle: {normal: {color: 'green',width: 4,type: 'dashed'}},
+                label: {show: true,position: 'bottom',textStyle: {fontSize: 10}}
+              },
+              {
+                name: '标准最高值',
+                type: 'line',
+                data: lengthInfo.MaxLength,
+                areaStyle: {color:'#C0D9D9',opacity:1,origin:"start"},
+              },
+              {
+                name: '标准最低值',
+                type: 'line',
+                data: lengthInfo.MinLength,
+                areaStyle: {color:'#ffffff',opacity:1,origin:"start"},
+              }
+            ]
+          };
+
+          option && myChart.setOption(option);
+        </script>
   </body>
 </html>

@@ -5,26 +5,6 @@ import (
 	"time"
 )
 
-type WeightInfo struct {
-	Date          []string
-	MaxWeight     []float64
-	MinWeight     []float64
-	CurrentWeight []float64
-}
-
-func GetChildWeightInfo() WeightInfo {
-	var weightInfo WeightInfo
-	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
-	for _, info := range weightList {
-		weightInfo.CurrentWeight = append(weightInfo.CurrentWeight, info.CurrentWeight)
-		weightInfo.MaxWeight = append(weightInfo.MaxWeight, info.StandMaxWeight*2)
-		weightInfo.MinWeight = append(weightInfo.MinWeight, info.StandMinWeight*2)
-		tmpData, _ := time.Parse("2006-01-02", info.Date)
-		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, int64(tmpData.Sub(birthDate).Hours())/24+1))
-	}
-	return weightInfo
-}
-
 var eventMap = []EventInfo{
 	{Date: "2023-08-15", EventDesc: "出生"},
 	{Date: "2023-08-16", EventDesc: "接种疫苗：卡介苗、乙肝第一针"},
@@ -33,6 +13,11 @@ var eventMap = []EventInfo{
 	{Date: "2023-09-09", EventDesc: "回家后第一次洗澡"},
 	{Date: "2023-09-11", EventDesc: "脐带脱落，办理出生证明"},
 	{Date: "2023-09-18", EventDesc: "第一罐奶粉吃完"},
+}
+
+var lengthList = []lengthConf{
+	{StandMaxLength: 54.0, StandMinLength: 46.9, CurrentLength: 50.00, Date: "2023-08-15"},
+	{StandMaxLength: 59.0, StandMinLength: 50.7, CurrentLength: 56.00, Date: "2023-09-14"},
 }
 
 var weightList = []weightConf{
@@ -72,6 +57,48 @@ var weightList = []weightConf{
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 8.00, Date: "2023-09-17"},
 }
 
+type LengthInfo struct {
+	Date          []string
+	MaxLength     []float64
+	MinLength     []float64
+	CurrentLength []float64
+}
+
+func GetChildLengthInfo() LengthInfo {
+	var lengthInfo LengthInfo
+
+	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
+	for _, info := range lengthList {
+		lengthInfo.CurrentLength = append(lengthInfo.CurrentLength, info.CurrentLength)
+		lengthInfo.MaxLength = append(lengthInfo.MaxLength, info.StandMaxLength)
+		lengthInfo.MinLength = append(lengthInfo.MinLength, info.StandMinLength)
+		tmpData, _ := time.Parse("2006-01-02", info.Date)
+		lengthInfo.Date = append(lengthInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, int64(tmpData.Sub(birthDate).Hours())/24+1))
+	}
+
+	return lengthInfo
+}
+
+type WeightInfo struct {
+	Date          []string
+	MaxWeight     []float64
+	MinWeight     []float64
+	CurrentWeight []float64
+}
+
+func GetChildWeightInfo() WeightInfo {
+	var weightInfo WeightInfo
+	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
+	for _, info := range weightList {
+		weightInfo.CurrentWeight = append(weightInfo.CurrentWeight, info.CurrentWeight)
+		weightInfo.MaxWeight = append(weightInfo.MaxWeight, info.StandMaxWeight*2)
+		weightInfo.MinWeight = append(weightInfo.MinWeight, info.StandMinWeight*2)
+		tmpData, _ := time.Parse("2006-01-02", info.Date)
+		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, int64(tmpData.Sub(birthDate).Hours())/24+1))
+	}
+	return weightInfo
+}
+
 type EventInfo struct {
 	Date      string
 	EventDesc string
@@ -85,5 +112,12 @@ type weightConf struct {
 	StandMaxWeight float64
 	StandMinWeight float64
 	CurrentWeight  float64
+	Date           string
+}
+
+type lengthConf struct {
+	StandMaxLength float64
+	StandMinLength float64
+	CurrentLength  float64
 	Date           string
 }

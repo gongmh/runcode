@@ -11,6 +11,7 @@ type BabyInfo struct {
 
 func (this *BabyInfo) Get() {
 	this.Data["weight_info"] = service.GetChildWeightInfo()
+	this.Data["length_info"] = service.GetChildLengthInfo()
 	this.Data["event_info"] = service.GetChildEventInfo()
 	this.TplName = "echarts/babyinfo.tpl"
 }
