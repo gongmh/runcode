@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <script src="/tools/static/js/echarts.min.js"></script>
-<title>正正信息</title>
+<title>儿童信息</title>
 </head>
 <body>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
