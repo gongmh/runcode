@@ -6,8 +6,8 @@
 </head>
 <body>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
-    <div id="event" style="float: middle;width:100%;height:200px;position:relative"></div>
     <div id="weight" style="float: middle;width:100%;height:550px;position:relative"></div>
+    <div id="event" style="float: middle;width:100%;height:200px;position:relative"></div>
     <script type="text/javascript">
         var eventInfo = {{.event_info}};
         const eventMap = new Map();
@@ -38,12 +38,12 @@
         option = {
           title: {
             top: 30,
-            left: 'center',
-            text: '2023'
+            //left: 'center',
+            text: '成长事件-2023'
           },
           tooltip: {
             formatter: function (params) {
-              return '事件: ' + params.value[2];
+              return params.value[0] + ' 事件: ' + params.value[2];
             }
           },
           calendar: {
