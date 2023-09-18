@@ -30,7 +30,8 @@ var eventMap = []EventInfo{
 	{Date: "2023-08-16", EventDesc: "接种疫苗：卡介苗、乙肝第一针"},
 	{Date: "2023-08-18", EventDesc: "胎便排完"},
 	{Date: "2023-08-19", EventDesc: "出院"},
-	{Date: "2023-09-11", EventDesc: "办理出生证明"},
+	{Date: "2023-09-09", EventDesc: "回家后第一次洗澡"},
+	{Date: "2023-09-11", EventDesc: "脐带脱落，办理出生证明"},
 	{Date: "2023-09-18", EventDesc: "第一罐奶粉吃完"},
 }
 
