@@ -13,11 +13,13 @@ var eventMap = []EventInfo{
 	{Date: "2023-09-09", EventDesc: "回家后第一次洗澡"},
 	{Date: "2023-09-11", EventDesc: "脐带脱落，办理出生证明"},
 	{Date: "2023-09-18", EventDesc: "第一罐奶粉吃完"},
+	{Date: "2023-09-19", EventDesc: "满月体检打疫苗，因湿疹严重未打疫苗"},
 }
 
 var lengthList = []lengthConf{
 	{StandMaxLength: 54.0, StandMinLength: 46.9, CurrentLength: 50.00, Date: "2023-08-15"},
 	{StandMaxLength: 59.0, StandMinLength: 50.7, CurrentLength: 56.00, Date: "2023-09-14"},
+	{StandMaxLength: 60.0, StandMinLength: 51.7, CurrentLength: 57.00, Date: "2023-09-19"},
 }
 
 var weightList = []weightConf{
@@ -55,6 +57,8 @@ var weightList = []weightConf{
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.60, Date: "2023-09-15"},
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 7.90, Date: "2023-09-16"},
 	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 8.00, Date: "2023-09-17"},
+	{StandMaxWeight: 5.7, StandMinWeight: 3.5, CurrentWeight: 8.00, Date: "2023-09-18"},
+	{StandMaxWeight: 6.1, StandMinWeight: 3.7, CurrentWeight: 8.20, Date: "2023-09-19"},
 }
 
 type LengthInfo struct {
