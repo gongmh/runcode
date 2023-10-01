@@ -71,6 +71,8 @@ var weightList = []weightConf{
 	{StandMaxWeight: 6.5, StandMinWeight: 3.9, CurrentWeight: 9.20, Date: "2023-09-27"},
 	{StandMaxWeight: 6.5, StandMinWeight: 3.9, CurrentWeight: 9.10, Date: "2023-09-28"},
 	{StandMaxWeight: 6.5, StandMinWeight: 3.9, CurrentWeight: 9.30, Date: "2023-09-29"},
+	{StandMaxWeight: 6.5, StandMinWeight: 3.9, CurrentWeight: 9.40, Date: "2023-09-30"},
+	{StandMaxWeight: 6.5, StandMinWeight: 3.9, CurrentWeight: 9.60, Date: "2023-10-01"},
 }
 
 type LengthInfo struct {
