@@ -15,6 +15,7 @@ var eventMap = []EventInfo{
 	{Date: "2023-09-18", EventDesc: "第一罐奶粉吃完"},
 	{Date: "2023-09-19", EventDesc: "满月体检打疫苗，因湿疹严重未打疫苗"},
 	{Date: "2023-09-24", EventDesc: "42天儿保，指标正常"},
+	{Date: "2023-10-10", EventDesc: "接种疫苗：乙肝第二针"},
 }
 
 var lengthList = []lengthConf{
