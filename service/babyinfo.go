@@ -24,7 +24,7 @@ var eventMap = []EventInfo{
 	{Date: "2024-01-21", EventDesc: "第一张银行卡"},
 	{Date: "2024-01-26", EventDesc: "生病：高烧、咳嗽"},
 	{Date: "2024-01-26", EventDesc: "办理医保"},
-	{Date: "2024-02-13", EventDesc: "蠕动爬行。。"},
+	{Date: "2024-02-13", EventDesc: "病愈，能蠕动爬行。。"},
 	{Date: "2024-02-15", EventDesc: "半岁"},
 }
 
