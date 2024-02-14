@@ -11,7 +11,7 @@
       <div id="weight" style="float: left;width:60%;height:550px;position:relative"></div>
       <div id="length" style="float: right;width:40%;height:550px;position:relative"></div>
     </div>
-    <div id="event" style="float: middle;width:100%;height:200px;position:relative"></div>
+    <div id="event" style="float: middle;width:100%;height:400px;position:relative"></div>
     <script type="text/javascript">
         var eventInfo = {{.event_info}};
         const eventMap = new Map();
@@ -43,29 +43,51 @@
           title: {
             top: 30,
             //left: 'center',
-            text: '成长事件-2023'
+            text: '成长事件'
           },
           tooltip: {
             formatter: function (params) {
               return params.value[0] + ' 事件: ' + params.value[2];
             }
           },
-          calendar: {
-            top: 80,
-            left: 30,
-            right: 30,
-            cellSize: ['auto', 13],
-            range: '2023',
-            itemStyle: {
-              borderWidth: 0.5
+          calendar: [
+            {
+                top: 80,
+                left: 30,
+                right: 30,
+                cellSize: ['auto', 13],
+                range: '2024',
+                itemStyle: {
+                    borderWidth: 0.5
+                },
+                yearLabel: { show: true }
             },
-            yearLabel: { show: true }
-          },
-          series: {
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            data: getDailyData('2023')
-          }
+            {
+                top: 200,
+                left: 30,
+                right: 30,
+                cellSize: ['auto', 13],
+                range: '2023',
+                itemStyle: {
+                    borderWidth: 0.5
+                },
+                yearLabel: { show: true }
+            }
+          ],
+          series: [
+            {
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                calendarIndex: 0,
+                data: getDailyData('2024')
+            },
+            {
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                calendarIndex: 1,
+                data: getDailyData('2023')
+            }
+          ]
         };
 
         option && myChart.setOption(option);
