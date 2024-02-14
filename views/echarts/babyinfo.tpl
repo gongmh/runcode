@@ -53,25 +53,19 @@
           calendar: [
             {
                 top: 80,
-                left: 30,
-                right: 30,
                 cellSize: ['auto', 13],
                 range: '2024',
                 itemStyle: {
                     borderWidth: 0.5
-                },
-                yearLabel: { show: true }
+                }
             },
             {
                 top: 200,
-                left: 30,
-                right: 30,
                 cellSize: ['auto', 13],
                 range: '2023',
                 itemStyle: {
                     borderWidth: 0.5
-                },
-                yearLabel: { show: true }
+                }
             }
           ],
           series: [
