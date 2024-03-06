@@ -26,8 +26,9 @@ var eventMap = []EventInfo{
 	{Date: "2024-01-26", EventDesc: "办理医保"},
 	{Date: "2024-02-13", EventDesc: "病愈，能蠕动爬行。。"},
 	{Date: "2024-02-15", EventDesc: "半岁"},
-	{Date: "2024-02-15", EventDesc: "体检档案转移"},
-	{Date: "2024-02-28", EventDesc: "接种疫苗"},
+	{Date: "2024-02-19", EventDesc: "第一次吃辅食：米粉"},
+	{Date: "2024-02-28", EventDesc: "体检档案转移"},
+	{Date: "2024-03-01", EventDesc: "接种疫苗"},
 	{Date: "2024-03-07", EventDesc: "领取医保卡"},
 }
 
