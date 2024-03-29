@@ -31,6 +31,7 @@ var eventMap = []EventInfo{
 	{Date: "2024-03-01", EventDesc: "接种疫苗"},
 	{Date: "2024-03-07", EventDesc: "领取医保卡"},
 	{Date: "2024-03-15", EventDesc: "感冒流鼻涕🤧"},
+	{Date: "2024-03-29", EventDesc: "接种疫苗：五联第三针"},
 }
 
 var lengthList = []lengthConf{
@@ -132,6 +133,7 @@ var weightList = []weightConf{
 	{StandMaxWeight: 10.6, StandMinWeight: 6.8, CurrentWeight: 16.5, Date: "2024-02-14"},
 	{StandMaxWeight: 10.9, StandMinWeight: 7.0, CurrentWeight: 18.3, Date: "2024-03-07"},
 	{StandMaxWeight: 10.9, StandMinWeight: 7.0, CurrentWeight: 18.4, Date: "2024-03-14"},
+	{StandMaxWeight: 11.2, StandMinWeight: 7.1, CurrentWeight: 19.4, Date: "2024-03-29"},
 }
 
 type LengthInfo struct {
