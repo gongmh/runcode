@@ -34,6 +34,9 @@ var eventMap = []EventInfo{
 	{Date: "2024-03-29", EventDesc: "接种疫苗：五联第三针"},
 	{Date: "2024-04-12", EventDesc: "第一次坐着洗澡🛀"},
 	{Date: "2024-04-16", EventDesc: "接种疫苗：麻腮风疫苗"},
+	{Date: "2024-04-27", EventDesc: "回老家"},
+	{Date: "2024-05-04", EventDesc: "回京"},
+	{Date: "2024-05-05", EventDesc: "第一次理发"},
 }
 
 var lengthList = []lengthConf{
@@ -151,13 +154,11 @@ type LengthInfo struct {
 func GetChildLengthInfo() LengthInfo {
 	var lengthInfo LengthInfo
 
-	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
 	for _, info := range lengthList {
 		lengthInfo.CurrentLength = append(lengthInfo.CurrentLength, info.CurrentLength)
 		lengthInfo.MaxLength = append(lengthInfo.MaxLength, info.StandMaxLength)
 		lengthInfo.MinLength = append(lengthInfo.MinLength, info.StandMinLength)
-		tmpData, _ := time.Parse("2006-01-02", info.Date)
-		lengthInfo.Date = append(lengthInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, int64(tmpData.Sub(birthDate).Hours())/24+1))
+		lengthInfo.Date = append(lengthInfo.Date, handleDay(info.Date))
 	}
 
 	return lengthInfo
@@ -172,15 +173,26 @@ type WeightInfo struct {
 
 func GetChildWeightInfo() WeightInfo {
 	var weightInfo WeightInfo
-	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
 	for _, info := range weightList {
 		weightInfo.CurrentWeight = append(weightInfo.CurrentWeight, info.CurrentWeight)
 		weightInfo.MaxWeight = append(weightInfo.MaxWeight, info.StandMaxWeight*2)
 		weightInfo.MinWeight = append(weightInfo.MinWeight, info.StandMinWeight*2)
-		tmpData, _ := time.Parse("2006-01-02", info.Date)
-		weightInfo.Date = append(weightInfo.Date, fmt.Sprintf("%s(%d天)", info.Date, int64(tmpData.Sub(birthDate).Hours())/24+1))
+		weightInfo.Date = append(weightInfo.Date, handleDay(info.Date))
 	}
 	return weightInfo
+}
+
+func handleDay(date string) string {
+	birthDate, _ := time.Parse("2006-01-02", "2023-08-15")
+	tmpData, _ := time.Parse("2006-01-02", date)
+	day := int64(tmpData.Sub(birthDate).Hours())/24 + 1
+	if day > 100 {
+		month := day / 30
+		day := day % 30
+		return fmt.Sprintf("%d月%d天", month, day)
+	}
+
+	return fmt.Sprintf("%d天", day)
 }
 
 type EventInfo struct {
