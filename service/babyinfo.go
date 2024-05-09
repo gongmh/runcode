@@ -37,6 +37,7 @@ var eventMap = []EventInfo{
 	{Date: "2024-04-27", EventDesc: "回老家"},
 	{Date: "2024-05-04", EventDesc: "回京"},
 	{Date: "2024-05-05", EventDesc: "第一次理发"},
+	{Date: "2024-05-07", EventDesc: "接种疫苗：13价肺炎球菌多糖结合第三针"},
 }
 
 var lengthList = []lengthConf{
