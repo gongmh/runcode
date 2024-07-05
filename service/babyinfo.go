@@ -50,6 +50,7 @@ var lengthList = []lengthConf{
 	{StandMaxLength: 61.0, StandMinLength: 52.6, CurrentLength: 56.00, Date: "2023-09-26"},
 	{StandMaxLength: 73.6, StandMinLength: 64.0, CurrentLength: 70.00, Date: "2024-02-14"},
 	{StandMaxLength: 76.6, StandMinLength: 66.6, CurrentLength: 70.07, Date: "2024-04-16"},
+	{StandMaxLength: 80.4, StandMinLength: 69.8, CurrentLength: 73.00, Date: "2024-07-05"},
 }
 
 var weightList = []weightConf{
