@@ -40,6 +40,7 @@ var eventMap = []EventInfo{
 	{Date: "2024-05-07", EventDesc: "接种疫苗：13价肺炎球菌多糖结合第三针"},
 	{Date: "2024-05-21", EventDesc: "接种疫苗：流脑第二针"},
 	{Date: "2024-06-04", EventDesc: "接种疫苗：乙肝第三针"},
+	{Date: "2024-07-02", EventDesc: "接种疫苗：吃轮状疫苗"},
 }
 
 var lengthList = []lengthConf{
@@ -147,6 +148,7 @@ var weightList = []weightConf{
 	{StandMaxWeight: 11.4, StandMinWeight: 7.3, CurrentWeight: 19.6, Date: "2024-04-16"},
 	{StandMaxWeight: 11.8, StandMinWeight: 7.6, CurrentWeight: 19.7, Date: "2024-05-25"},
 	{StandMaxWeight: 11.9, StandMinWeight: 7.6, CurrentWeight: 19.9, Date: "2024-06-06"},
+	{StandMaxWeight: 12.2, StandMinWeight: 7.8, CurrentWeight: 21.0, Date: "2024-07-05"},
 }
 
 type LengthInfo struct {
