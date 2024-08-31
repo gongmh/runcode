@@ -43,6 +43,7 @@ var eventMap = []EventInfo{
 	{Date: "2024-07-02", EventDesc: "接种疫苗：吃轮状疫苗"},
 	{Date: "2024-07-18", EventDesc: "接种疫苗：手足口疫苗"},
 	{Date: "2024-07-20", EventDesc: "认识火火兔，自己能打开"},
+	{Date: "2024-08-29", EventDesc: "接种疫苗：乙脑"},
 }
 
 var lengthList = []lengthConf{
