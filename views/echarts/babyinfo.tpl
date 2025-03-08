@@ -54,13 +54,21 @@
             {
                 top: 80,
                 cellSize: ['auto', 13],
-                range: '2024',
+                range: '2025',
                 itemStyle: {
                     borderWidth: 0.5
                 }
             },
             {
                 top: 200,
+                cellSize: ['auto', 13],
+                range: '2024',
+                itemStyle: {
+                    borderWidth: 0.5
+                }
+            },
+            {
+                top: 320,
                 cellSize: ['auto', 13],
                 range: '2023',
                 itemStyle: {
@@ -73,12 +81,18 @@
                 type: 'heatmap',
                 coordinateSystem: 'calendar',
                 calendarIndex: 0,
-                data: getDailyData('2024')
+                data: getDailyData('2025')
             },
             {
                 type: 'heatmap',
                 coordinateSystem: 'calendar',
                 calendarIndex: 1,
+                data: getDailyData('2024')
+            },
+            {
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                calendarIndex: 2,
                 data: getDailyData('2023')
             }
           ]
