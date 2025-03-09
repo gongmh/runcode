@@ -42,8 +42,7 @@ var eventMap = []EventInfo{
 	{Date: "2024-06-04", EventDesc: "接种疫苗：乙肝第三针"},
 	{Date: "2024-07-02", EventDesc: "接种疫苗：吃轮状疫苗"},
 	{Date: "2024-07-18", EventDesc: "接种疫苗：手足口疫苗"},
-	{Date: "2024-07-20", EventDesc: "认识火火兔，自己能打开"},
-	{Date: "2024-08-29", EventDesc: "接种疫苗：乙脑，发高烧"},
+	{Date: "2024-07-20", EventDesc: "认识火火兔，自己能打开"}.cDate: "2024-08-29", EventDesc: "接种疫苗：乙脑，发高烧"},
 	{Date: "2024-09-10", EventDesc: "会自己满屋子溜达了😄"},
 	{Date: "2024-10-22", EventDesc: "会叫爸爸了~"},
 	{Date: "2024-11-26", EventDesc: "今年第一场雪，清晰的叫爸爸了。"},
@@ -64,6 +63,7 @@ var lengthList = []lengthConf{
 	{StandMaxLength: 84.8, StandMinLength: 73.3, CurrentLength: 77.00, Date: "2024-10-26"},
 	{StandMaxLength: 85.4, StandMinLength: 73.7, CurrentLength: 80.00, Date: "2024-11-08"},
 	{StandMaxLength: 87.1, StandMinLength: 75.1, CurrentLength: 81.00, Date: "2024-12-20"},
+	{StandMaxLength: 90.1, StandMinLength: 77.2, CurrentLength: 84.00, Date: "2025-03-09"},
 }
 
 var weightList = []weightConf{
@@ -167,6 +167,7 @@ var weightList = []weightConf{
 	{StandMaxWeight: 13.1, StandMinWeight: 8.5, CurrentWeight: 23.0, Date: "2024-10-26"},
 	{StandMaxWeight: 13.4, StandMinWeight: 8.6, CurrentWeight: 23.7, Date: "2024-11-26"},
 	{StandMaxWeight: 13.5, StandMinWeight: 8.8, CurrentWeight: 23.7, Date: "2024-12-20"},
+	{StandMaxWeight: 14.3, StandMinWeight: 9.3, CurrentWeight: 25.5, Date: "2025-03-09"},
 }
 
 type LengthInfo struct {
