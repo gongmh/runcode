@@ -51,6 +51,7 @@ var eventMap = []EventInfo{
 	{Date: "2025-02-19", EventDesc: "接种疫苗：甲肝"},
 	{Date: "2025-03-07", EventDesc: "一直叫爸爸爸爸。。"},
 	{Date: "2025-03-08", EventDesc: "自己知道用手吃饭，不过今天摔了一跤，嘴巴破了"},
+	{Date: "2025-03-18", EventDesc: "接种疫苗：麻腮风疫苗"},
 }
 
 var lengthList = []lengthConf{
