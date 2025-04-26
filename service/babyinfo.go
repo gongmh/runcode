@@ -52,6 +52,7 @@ var eventMap = []EventInfo{
 	{Date: "2025-03-07", EventDesc: "一直叫爸爸爸爸。。"},
 	{Date: "2025-03-08", EventDesc: "自己知道用手吃饭，不过今天摔了一跤，嘴巴破了"},
 	{Date: "2025-03-18", EventDesc: "接种疫苗：麻腮风疫苗"},
+	{Date: "2025-04-11", EventDesc: "接种疫苗：五联第四针"},
 }
 
 var lengthList = []lengthConf{
@@ -66,6 +67,7 @@ var lengthList = []lengthConf{
 	{StandMaxLength: 85.4, StandMinLength: 73.7, CurrentLength: 80.00, Date: "2024-11-08"},
 	{StandMaxLength: 87.1, StandMinLength: 75.1, CurrentLength: 81.00, Date: "2024-12-20"},
 	{StandMaxLength: 90.1, StandMinLength: 77.2, CurrentLength: 84.00, Date: "2025-03-09"},
+	{StandMaxLength: 91.5, StandMinLength: 78.5, CurrentLength: 86.00, Date: "2025-04-13"},
 }
 
 var weightList = []weightConf{
