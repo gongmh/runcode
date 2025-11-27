@@ -74,7 +74,7 @@ func CodeRun(codeType, codeContent, clientIp, userAgent string) (result string, 
 		return
 	}
 
-	if err == nil && cd.RunResult == models.RUNCODE_RESULT_SUCC {
+	if err == nil && cd.RunResult == models.RUNCODE_RESULT_SUCC && cd.RunResultInfo != "" {
 		logs.Info("CodeRun: code exist. cd=%v", cd.CodeId)
 		return cd.RunResultInfo, cd.CodeId, nil
 	}
